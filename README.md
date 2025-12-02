@@ -8,35 +8,19 @@ On block **23,924,517**, the Pool contract at `0x0689aa2234d06Ac0d04cdac874331d2
 
 EOA had given an unlimited `USDC approval` to the Pool contract, the vulnerable `collectInterestRepayment()` function allows ANY caller to specify ANY `from` address, enabling the attacker to `drain` the entire EOA USDC balance directly to the Pool, then withdraw it.
 
-| **Tx Hash** `0x3a8bde0a17e04f6a119ae2f28e6b56ac736feb70761e2fa97cac25f816f751c2`
+**Tx Hash** `0x3a8bde0a17e04f6a119ae2f28e6b56ac736feb70761e2fa97cac25f816f751c2`
 
-| **Block** 23,924,517
+**Block** 23,924,517
 
-| **Exploit** `0x716420E787D20B255EeEd9f6D442fa454f1d7d5B`
+**Exploit** `0x716420E787D20B255EeEd9f6D442fa454f1d7d5B`
 
-| **Victim EOA** `0x526C7665C5dd9cD7102C6d42D407a0d9DC1e431d`
+**Victim EOA** `0x526C7665C5dd9cD7102C6d42D407a0d9DC1e431d`
 
-| **Funds Stolen** 340,567 USDC
+**Funds Stolen** 340,567 USDC
 
-| **Profit** 330,999 USDC
+**Profit** 330,999 USDC
 
-| **Flashloan** 1,000 USDC
-
----
-
-`0x716420E787D20B255EeEd9f6D442fa454f1d7d5B` | Exploit
-
-`0x526C7665C5dd9cD7102C6d42D407a0d9DC1e431d` | Victim EOA (had UNLIMITED approval to Pool for USDC)
-
-`0x0689aa2234d06Ac0d04cdac874331d287aFA4B43` | Vulnerable Pool (Proxy)
-
-`0x7dbE30FDE1Eca6856806fF14fc456ec6791c73FE` | Pool Implementation (delegatecall)
-
-`0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640` | Uniswap V3 USDC/WETH Pool (Flashloan Source)
-
-`0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48` | USDC Token
-
-`0x2C2EC35549BFB2f983C2025Dfb2ab1c0f69c1ee9` | Profit Receiver (Attacker EOA)
+**Flashloan** 1,000 USDC
 
 ---
 
@@ -121,6 +105,22 @@ Profit transferred: 330,999 USDC → 0x2C2EC35549BFB2f983C2025Dfb2ab1c0f69c1ee9
 
 
 The flashloan was used because the attacker didn't need any initial capital - they borrowed 1,000 USDC, used it to establish withdrawal rights, siphoned 340K USDC from the victim, withdrew everything, repaid the loan, and kept 330K profit.
+
+---
+
+`0x716420E787D20B255EeEd9f6D442fa454f1d7d5B` | Exploit
+
+`0x526C7665C5dd9cD7102C6d42D407a0d9DC1e431d` | Victim EOA (had UNLIMITED approval to Pool for USDC)
+
+`0x0689aa2234d06Ac0d04cdac874331d287aFA4B43` | Vulnerable Pool (Proxy)
+
+`0x7dbE30FDE1Eca6856806fF14fc456ec6791c73FE` | Pool Implementation (delegatecall)
+
+`0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640` | Uniswap V3 USDC/WETH Pool (Flashloan Source)
+
+`0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48` | USDC Token
+
+`0x2C2EC35549BFB2f983C2025Dfb2ab1c0f69c1ee9` | Profit Receiver (Attacker EOA)
 
 ---
 
