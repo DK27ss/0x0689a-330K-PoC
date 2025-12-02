@@ -96,6 +96,9 @@ Total withdrawn:             ~341,000 USDC
 (because limited by transactionLimit of 10,000 USDC per tx)
 ```
 
+<img width="880" height="532" alt="image" src="https://github.com/user-attachments/assets/4a08c0f4-f681-4301-804d-1c0050563639" />
+
+
 // Step 5 - Repay & Profit
 
 ```
