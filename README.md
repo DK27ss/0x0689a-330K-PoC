@@ -106,6 +106,8 @@ Repay to Uniswap V3: 1,001 USDC (principal + fee)
 Profit transferred: 330,999 USDC → 0x2C2EC35549BFB2f983C2025Dfb2ab1c0f69c1ee9
 ```
 
+<img width="880" height="392" alt="image" src="https://github.com/user-attachments/assets/0e3e79d5-a39f-496d-bcd8-02cc3681288f" />
+
 
 The flashloan was used because the attacker didn't need any initial capital - they borrowed 1,000 USDC, used it to establish withdrawal rights, siphoned 340K USDC from the victim, withdrew everything, repaid the loan, and kept 330K profit.
 
