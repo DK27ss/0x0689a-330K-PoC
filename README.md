@@ -52,7 +52,7 @@ function doERC20Transfer(address from, address to, uint amount) internal returns
 }
 ```
 
-victim EOA approved a vulnerable Proxy `0x0689aa2234d06ac0d04cdac874331d287afa4b43` in 2020
+victim EOA approved a vulnerable Proxy `0x0689aa2234d06ac0d04cdac874331d287afa4b43` in 2020-10-02 at 20:30:57
 
 [EOA Approval TX](https://app.blocksec.com/explorer/tx/eth/0x3e7225b2c7aa1050da74c79bdab8dd7694ee10f5835eaac2482670778f2f3a7e)
 
