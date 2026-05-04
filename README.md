@@ -147,3 +147,11 @@ The flashloan was used because the attacker didn't need any initial capital - th
 - [Victim EOA](https://etherscan.io/address/0x526C7665C5dd9cD7102C6d42D407a0d9DC1e431d)
 - [Profit Receiver](https://etherscan.io/address/0x2C2EC35549BFB2f983C2025Dfb2ab1c0f69c1ee9)
 
+>
+>Company : https://blockraider.xyz/
+>
+>Community : https://discord.gg/Vqqt7jyRr7
+>
+>Disclosure : https://t.me/blockraider_alerts_bot
+
+<img width="161" height="51" alt="blockraider" src="https://github.com/user-attachments/assets/dc86222a-b5fb-49e8-9a9d-350973b7521d" />
